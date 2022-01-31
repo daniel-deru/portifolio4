@@ -1,16 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+:root {
+  --main: hsl(205, 100%, 43%);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: sans-serif;
+  background-image: url("../public/hexagon.jpg");
+  background-size: cover;
+  font-family: 'Gugi', cursive;
+  color: white;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
 }
+
+li {
+  color: var(--main);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
