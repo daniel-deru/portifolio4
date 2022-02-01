@@ -1,0 +1,9 @@
+.container {
+    border: 2px solid white;
+    width: 95vw;
+    color: white;
+}
+
+.container svg {
+    border: 2px solid white;
+}

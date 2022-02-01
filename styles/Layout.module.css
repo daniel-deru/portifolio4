@@ -1,0 +1,7 @@
+.main-container {
+    display: flex;
+}
+
+.main-container:last-child {
+    width: 90vw;
+}
