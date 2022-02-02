@@ -1,16 +1,12 @@
-import { useRef, useEffect, useState } from "react"
+import styles from "../styles/Text.module.css"
 
-const Text = ({ children }) => {
-  const [dimensions, setDimensions] = useState()
-  const textRef = useRef()
+import { useRef } from "react"
 
-  useEffect(() => {
-    console.log(textRef)
-    setDimensions({height: textRef.current.scrollHeight, width: textRef.current.clientWidth})
-  }, [textRef])
+const Text = ({ children, width, height, y, className }) => {
+
   return (
-    <svg width={dimensions.width} height={dimensions.height}>
-        <text ref={textRef} y={dimensions.height}  fill="white">{children}</text>
+    <svg height={height} width={width} className={`${styles.svg}`}>
+        <text y={y}>{children}</text>
     </svg>
   )
 };
