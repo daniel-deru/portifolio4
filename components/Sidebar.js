@@ -5,7 +5,7 @@ import { FaCodepen, FaGithub, FaYoutube } from "react-icons/fa"
 import { SiReplit, SiCodewars } from "react-icons/si"
 
 const Sidebar = () => {
-  console.log(styles)
+
   return <aside className={styles.container}>
             <FaCodepen />
             <FaGithub />

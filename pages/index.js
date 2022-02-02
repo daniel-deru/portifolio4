@@ -7,28 +7,27 @@ import { useRef, useEffect } from "react"
 import Text from '../components/Text'
 
 export default function Home() {
-  let svgDim = {
-    height: 65,
-    width: 410
-  }
-  const textRef = useRef()
 
-  useEffect(() => {
-    console.log(textRef.current.getBBox())
-  }, [textRef])
   return (
     <section className={styles.home}>
       <div className={styles['home-container']}>
+
         <div>
-          <svg className={styles.svg}>
-            <text ref={textRef} className={styles.blue}>Hi, I'm </text>
-            <text>Daniel </text>
-            <text className={styles.blue}>.</text>
-          </svg>
+
+          <div>
+            <Text fontSize={"4em"}>Hi, I'm Daniel.</Text>
+          </div>
+
+          <div>
+            <Text fontSize={"3em"}>Welcome To My Portifolio </Text>
+          </div>
+
         </div>
+
         <div>
-          <button>Check Out My Work</button>
+          <button className={styles.cta}>Check Out My Work</button>
         </div>
+
       </div>
     </section>
   )

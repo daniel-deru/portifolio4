@@ -1,12 +1,21 @@
 import styles from "../styles/Text.module.css"
 
-import { useRef } from "react"
+import { useRef, useEffect, useState } from "react"
 
-const Text = ({ children, width, height, y, className }) => {
+const Text = ({ children, fontSize }) => {
+  const [box, setBox] = useState()
+  const textRef = useRef()
+
+  useEffect(() => {
+
+    let {y, x, width, height} = textRef.current.getBBox()
+    setBox({y, x, width, height})
+    
+  }, [textRef])
 
   return (
-    <svg height={height} width={width} className={`${styles.svg}`}>
-        <text y={y}>{children}</text>
+    <svg width={box?.width + 10} height={box?.height}>
+        <text ref={textRef} fontSize={fontSize} y={-(box?.y)}>{children}</text>
     </svg>
   )
 };
