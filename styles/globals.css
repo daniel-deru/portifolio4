@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
 
 :root {
-  --main: hsl(205, 100%, 43%);
+  --main: #0080db;
 }
 
 html,

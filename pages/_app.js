@@ -1,14 +1,18 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout'
 
-import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
-import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false;
+import { ThemeProvider } from "styled-components"
+
+const theme = {
+  mainColor: "#0080db"
+}
 
 function MyApp({ Component, pageProps }) {
-  return <Layout>
-            <Component {...pageProps} />
-        </Layout>
+  return  <ThemeProvider theme={theme}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ThemeProvider>
 }
 
 export default MyApp
