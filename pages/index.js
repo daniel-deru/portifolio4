@@ -19,7 +19,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Text fontSize={"3em"}>Welcome To My Portifolio </Text>
+            <Text fontSize={"3em"} fill={"white"}>Welcome To My Portifolio. </Text>
           </div>
 
         </div>

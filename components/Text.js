@@ -1,8 +1,6 @@
-import styles from "../styles/Text.module.css"
-
 import { useRef, useEffect, useState } from "react"
 
-const Text = ({ children, fontSize }) => {
+const Text = ({ children, fontSize, fill }) => {
   const [box, setBox] = useState()
   const textRef = useRef()
 
@@ -15,7 +13,7 @@ const Text = ({ children, fontSize }) => {
 
   return (
     <svg width={box?.width + 10} height={box?.height}>
-        <text ref={textRef} fontSize={fontSize} y={-(box?.y)}>{children}</text>
+        <text ref={textRef} fontSize={fontSize} y={-(box?.y)} fill={fill}>{children}</text>
     </svg>
   )
 };
