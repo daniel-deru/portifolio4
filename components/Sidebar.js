@@ -1,18 +1,17 @@
-// @refresh reset
-import styles from "../styles/Sidebar.module.css"
+import { SidebarStyle } from "./styled/Sidebar.styled"
 
 import { FaCodepen, FaGithub, FaYoutube } from "react-icons/fa"
 import { SiReplit, SiCodewars } from "react-icons/si"
 
 const Sidebar = () => {
 
-  return <aside className={styles.container}>
+  return <SidebarStyle>
             <FaCodepen />
             <FaGithub />
             <FaYoutube />
             <SiReplit />
             <SiCodewars />
-        </aside>
+        </SidebarStyle>
 }
 
 export default Sidebar

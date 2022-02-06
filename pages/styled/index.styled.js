@@ -1,11 +1,12 @@
-.home {
+import styled from "styled-components";
+
+export const HomeStyle = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     margin: auto;
     width: 95vw;
-}
 
 .home-container {
     color: white;
@@ -30,3 +31,4 @@
     border-radius: 5px;
     margin-top: 3rem;
 }
+`

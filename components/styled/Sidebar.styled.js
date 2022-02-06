@@ -1,4 +1,7 @@
-.container {
+import styled from "styled-components";
+
+export const SidebarStyle = styled.aside`
+
     display: flex;
     flex-direction: column;
     color:  var(--main);
@@ -7,9 +10,11 @@
     width: 5vw;
     margin: 3rem 0px;
     justify-content: space-between;
-}
 
-.container * {
-    font-size: 2em;
-    margin: 20px auto;
-}
+
+    & * {
+        font-size: 2em;
+        margin: 20px auto;
+    }
+
+`

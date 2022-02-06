@@ -1,8 +1,8 @@
-import styles from "../styles/Work.module.css"
+import { Work } from "./styled/work.styled";
 
 const work = () => {
   return(
-    <div className={styles.work}>
+    <Work>
         <section>
           <div></div>
           <div></div>
@@ -19,7 +19,7 @@ const work = () => {
           <div></div>
           <div></div>
         </section>
-    </div>
+    </Work>
   );
 };
 

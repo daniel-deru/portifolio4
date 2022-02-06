@@ -4,7 +4,8 @@ import Layout from '../components/Layout'
 import { ThemeProvider } from "styled-components"
 
 const theme = {
-  mainColor: "#0080db"
+  mainColor: "#0080db",
+  darkGrey: "#282828",
 }
 
 function MyApp({ Component, pageProps }) {

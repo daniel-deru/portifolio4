@@ -1,4 +1,4 @@
-import styles from  "../styles/Layout.module.css"
+import { LayoutStyle } from "./styled/Layout.styled";
 
 
 import Header from "../components/Header"
@@ -6,15 +6,15 @@ import Sidebar from "../components/Sidebar";
 
 const Layout = ({ children }) => {
 
-  return <>
+  return <LayoutStyle>
             <Header />
-            <div className={styles['main-container']}>
+            <div className="main-container">
               <Sidebar />
               {children}
             </div>
 
 
-        </>;
+        </LayoutStyle>;
 };
 
 export default Layout;

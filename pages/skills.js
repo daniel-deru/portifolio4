@@ -1,5 +1,3 @@
-import styles from "../styles/Skills.module.css"
-
 import { useRef, useState, useEffect } from "react"
 
 import { Orbit } from "../components/styled/Orbit.styled";

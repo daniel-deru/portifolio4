@@ -1,16 +1,14 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { HomeStyle } from './styled/index.styled'
 
-import { useRef, useEffect } from "react"
+
 
 import Text from '../components/Text'
 
 export default function Home() {
 
   return (
-    <section className={styles.home}>
-      <div className={styles['home-container']}>
+    <HomeStyle>
+      <div className='home-container'>
 
         <div>
 
@@ -25,10 +23,10 @@ export default function Home() {
         </div>
 
         <div>
-          <button className={styles.cta}>Check Out My Work</button>
+          <button className="cta">Check Out My Work</button>
         </div>
 
       </div>
-    </section>
+    </HomeStyle>
   )
 }

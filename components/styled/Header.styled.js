@@ -1,9 +1,11 @@
-.header {
+import styled from "styled-components";
+
+export const HeaderStyle = styled.header`
     display: flex;
     justify-content: space-between;
     margin: 0px 10px;
     height: 10vh;
-}
+
 
 .nav {
     display: flex;
@@ -28,3 +30,6 @@
   }
   
 
+
+
+`
