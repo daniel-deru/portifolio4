@@ -1,12 +1,16 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { HeaderStyle } from "./styled/Header.styled";
+import Text from "./Text";
 
 const Header = () => {
     const router = useRouter()
   return <HeaderStyle>
             <div id="logo">
-                <img src="logo.png" alt="" className="logo" />
+                <Text fill={"none"} fontFamily={"Audiowide"} strokeWidth={2} stroke={"white"} fontSize={"40px"}>D</Text>
+                <Text fill={"none"} fontFamily={"Audiowide"} strokeWidth={2} stroke={"#0080db"} fontSize={"40px"}>J</Text>
+                <Text fill={"none"} fontFamily={"Audiowide"} strokeWidth={2} stroke={"white"} fontSize={"40px"}>d</Text>
+                <Text fill={"none"} fontFamily={"Audiowide"} strokeWidth={2} stroke={"white"} fontSize={"40px"}>R</Text>
             </div>
             <nav>
                 <ul className="nav">

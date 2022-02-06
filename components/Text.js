@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react"
-
-const Text = ({ children, fontSize, fill }) => {
+// { children, fontSize, fill, fontFamily }
+const Text = (props) => {
   const [box, setBox] = useState()
   const textRef = useRef()
 
@@ -13,7 +13,17 @@ const Text = ({ children, fontSize, fill }) => {
 
   return (
     <svg width={box?.width + 10} height={box?.height}>
-        <text ref={textRef} fontSize={fontSize} y={-(box?.y)} fill={fill}>{children}</text>
+        <text 
+        stroke={props.stroke} 
+        strokeWidth={props.strokeWidth} 
+        fontFamily={props.fontFamily} 
+        ref={textRef} 
+        fontSize={props.fontSize} 
+        y={-(box?.y)} 
+        fill={props.fill}
+        >
+          {props.children}
+        </text>
     </svg>
   )
 };
