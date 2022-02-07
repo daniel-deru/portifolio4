@@ -14,6 +14,7 @@ body {
   background-size: cover;
   font-family: 'Gugi', cursive;
   color: white;
+  overflow-x: hidden;
 }
 
 a {

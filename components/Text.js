@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect, useState, useLayoutEffect } from "react"
 // { children, fontSize, fill, fontFamily }
 const Text = (props) => {
   const [box, setBox] = useState()
@@ -14,13 +14,13 @@ const Text = (props) => {
   return (
     <svg width={box?.width + 10} height={box?.height}>
         <text 
-        stroke={props.stroke} 
-        strokeWidth={props.strokeWidth} 
-        fontFamily={props.fontFamily} 
+        stroke={props?.stroke} 
+        strokeWidth={props?.strokeWidth} 
+        fontFamily={props?.fontFamily} 
         ref={textRef} 
-        fontSize={props.fontSize} 
+        fontSize={props?.fontSize} 
         y={-(box?.y)} 
-        fill={props.fill}
+        fill={props?.fill}
         >
           {props.children}
         </text>
