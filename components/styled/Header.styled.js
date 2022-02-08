@@ -7,7 +7,9 @@ export const HeaderStyle = styled.header`
     margin: 0px 10px;
     height: 10vh;
 
-
+.wrapper {
+    margin-top: 20px;
+}
 .nav {
     display: flex;
     list-style-type: none;

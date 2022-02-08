@@ -2,20 +2,20 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { HeaderStyle } from "./styled/Header.styled";
-import Text from "./Text";
+import Image from "next/image";
 
 const Header = () => {
     const router = useRouter()
     const LINKS = ["Work", "Skills", "About", "Contact", "Resume"]
 
-    const logoAnim = {
+    const logoVariants = {
         hidden: {
-            y: "-100%",
-            x: "30vw"
+            x: "200%",
+            y: "-200%"
         },
         visible: {
-            y: 0,
             x: 0,
+            y: 0,
             transition: {
                 x: {
                     delay: 0.3
@@ -24,62 +24,60 @@ const Header = () => {
         }
     }
 
-    const navVariants = {
-        hidden: {
-            transition: {
-                when: "afterChildren"
-            }
-        },
-        visible: {
-            transition: {
-                when: "beforeChildren",
-                // staggerChildren: 0.3,
-              }
-        }
-    }
-
     const items = {
-        hidden: {
-            x: "100vw"
-        },
-        visible: {
+        hidden: index => ({
+            x: (index+1) * -80,
+            y: "-10vh"
+        }),
+        visible: index => ({
             x: 0,
+            y: 0,
             transition: {
+                delay: (index+1) * 0.3,
                 x: {
-                    delay: 0.2
+                    delay: (index+1) * 0.4
                 }
             }
-        }
+        })
     }
   return <HeaderStyle>
-            <motion.div id="logo"
-                variants={logoAnim}
-                animate="visible"
+            <motion.div 
+                id="logo"
+
+                variants={logoVariants}
                 initial="hidden"
+                animate="visible"
             >
-                <Text fill={"none"} fontFamily={"Audiowide"} strokeWidth={2} stroke={"white"} fontSize={"40px"}>D</Text>
-                <Text fill={"none"} fontFamily={"Audiowide"} strokeWidth={2} stroke={"#0080db"} fontSize={"40px"}>J</Text>
-                <Text fill={"none"} fontFamily={"Audiowide"} strokeWidth={2} stroke={"white"} fontSize={"40px"}>d</Text>
-                <Text fill={"none"} fontFamily={"Audiowide"} strokeWidth={2} stroke={"white"} fontSize={"40px"}>R</Text>
+                <div className="wrapper">
+                    <Image 
+                        src="/logo.png"
+                        width={60}
+                        height={30}
+                        className="logo"
+                    />
+                </div>
+
             </motion.div>
             <nav>
-                <motion.ul 
-                className="nav"
-                variants={navVariants}
-                initial="hidden"
-                animate="visible"
-                >
-                    {LINKS.map(function(link){
+                <ul className="nav">
+                    {LINKS.map(function(link, index){
                         let path = `/${link.toLocaleLowerCase()}`
                         return (
-                            <motion.li variants={items} key={link}>
+                            <motion.li 
+                                variants={items}
+                                initial="hidden"
+                                animate="visible"
+                                custom={index}
+                                key={link}
+                            
+                            >
                                 <Link href={path}>
                                     <a className={router.pathname == path ? "active" : "link"}>{link}</a>
                                 </Link>
                             </motion.li>
                         )
                     })}
-                </motion.ul>
+                </ul>
             </nav>
         </HeaderStyle>
         

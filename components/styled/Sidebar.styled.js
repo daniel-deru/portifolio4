@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion"
 
-export const SidebarStyle = styled.aside`
+export const SidebarStyle = styled(motion.aside)`
 
     display: flex;
     flex-direction: column;
@@ -12,9 +13,10 @@ export const SidebarStyle = styled.aside`
     justify-content: space-between;
 
 
-    & * {
+    & > * {
         font-size: 2em;
         margin: 20px auto;
     }
+
 
 `
