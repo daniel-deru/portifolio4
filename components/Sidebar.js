@@ -18,26 +18,33 @@ const Sidebar = () => {
   const sideBarVariants = {
     hidden: {
         x: "-200%",
+        opacity: 0,
     },
     visible: {
       x: 0,
+      opacity: 1,
       transition: {
-        delay: 2.4,
+        duration: 1.5,
+        ease: "easeOut",
+        opacity: {
+          duration: 2
+        }
+
       }
     }
   }
 
-  const iconVariant = {
-    hidden: {
-      x: "-400%"
-    },
-    visible: index => ({
-      x: 0,
-      transition: {
-        delay: 2.6 + (index * 0.3)
-      }
-    })
-  }
+  // const iconVariant = {
+  //   hidden: {
+  //     x: "-400%"
+  //   },
+  //   visible: index => ({
+  //     x: 0,
+  //     transition: {
+  //       delay: 2.6 + (index * 0.3)
+  //     }
+  //   })
+  // }
 
   return <SidebarStyle
             variants={sideBarVariants}
@@ -47,10 +54,10 @@ const Sidebar = () => {
             {iconArray.map((icon, index) => 
               <motion.div
                 className="icon-container"
-                custom={index}
-                variants={iconVariant}
-                initial="hidden"
-                animate="visible"
+                // custom={index}
+                // variants={iconVariant}
+                // initial="hidden"
+                // animate="visible"
               >
                 {icon}
               </motion.div>)}

@@ -8,45 +8,30 @@ const Header = () => {
     const router = useRouter()
     const LINKS = ["Work", "Skills", "About", "Contact", "Resume"]
 
-    const logoVariants = {
+    const headerVariant = {
         hidden: {
-            x: "200%",
-            y: "-200%"
+            y: "-200%",
+            opacity: 0
         },
         visible: {
-            x: 0,
             y: 0,
+            opacity: 1,
             transition: {
-                x: {
-                    delay: 0.3
+                ease: "easeOut",
+                duration: 1.5,
+                opacity: {
+                    duration: 2
                 }
             }
         }
     }
-
-    const items = {
-        hidden: index => ({
-            x: (index+1) * -80,
-            y: "-10vh"
-        }),
-        visible: index => ({
-            x: 0,
-            y: 0,
-            transition: {
-                delay: (index+1) * 0.3,
-                x: {
-                    delay: (index+1) * 0.4
-                }
-            }
-        })
-    }
-  return <HeaderStyle>
+  return <HeaderStyle
+            variants={headerVariant}
+            initial="hidden"
+            animate="visible"
+         >
             <motion.div 
                 id="logo"
-
-                variants={logoVariants}
-                initial="hidden"
-                animate="visible"
             >
                 <div className="wrapper">
                     <Image 
@@ -63,14 +48,7 @@ const Header = () => {
                     {LINKS.map(function(link, index){
                         let path = `/${link.toLocaleLowerCase()}`
                         return (
-                            <motion.li 
-                                variants={items}
-                                initial="hidden"
-                                animate="visible"
-                                custom={index}
-                                key={link}
-                            
-                            >
+                            <motion.li  key={link}>
                                 <Link href={path}>
                                     <a className={router.pathname == path ? "active" : "link"}>{link}</a>
                                 </Link>

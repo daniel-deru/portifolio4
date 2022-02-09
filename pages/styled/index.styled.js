@@ -13,8 +13,8 @@ export const HomeStyle = styled.div`
 }
 
 svg {
-    font-size: 4em;
-    border: 2px solid white;
+    font-size: 3em;
+    /* border: 2px solid white; */
 
 }
 

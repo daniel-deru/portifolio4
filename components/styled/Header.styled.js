@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
 
-export const HeaderStyle = styled.header`
+export const HeaderStyle = styled(motion.header)`
     display: flex;
     justify-content: space-between;
     margin: 0px 10px;
