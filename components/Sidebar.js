@@ -7,12 +7,17 @@ import { motion } from "framer-motion"
 
 const Sidebar = () => {
 
+  const iconArray = [
+    <FaCodepen />, 
+    <FaGithub />,  
+    <FaYoutube />, 
+    <SiReplit />, 
+    <SiCodewars />
+    ]
+
   const sideBarVariants = {
     hidden: {
         x: "-200%",
-        transition: {
-          when: "afterChildren"
-        }
     },
     visible: {
       x: 0,
@@ -22,26 +27,33 @@ const Sidebar = () => {
     }
   }
 
-  
+  const iconVariant = {
+    hidden: {
+      x: "-400%"
+    },
+    visible: index => ({
+      x: 0,
+      transition: {
+        delay: 2.6 + (index * 0.3)
+      }
+    })
+  }
 
   return <SidebarStyle
             variants={sideBarVariants}
             initial="hidden"
             animate="visible"
           >
-            {[
-            <FaCodepen />, 
-            <FaGithub />,  
-            <FaYoutube />, 
-            <SiReplit />, 
-            <SiCodewars />
-            ].map((icon, index) => 
-            <motion.div
-              className="icon-container"
-              custom={index}
-            >
-              {icon}
-            </motion.div>)}
+            {iconArray.map((icon, index) => 
+              <motion.div
+                className="icon-container"
+                custom={index}
+                variants={iconVariant}
+                initial="hidden"
+                animate="visible"
+              >
+                {icon}
+              </motion.div>)}
         </SidebarStyle>
 }
 

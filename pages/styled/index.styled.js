@@ -12,14 +12,27 @@ export const HomeStyle = styled.div`
     color: white;
 }
 
+svg {
+    font-size: 4em;
+    border: 2px solid white;
 
-.home-container svg {
-    fill: var(--main);
 }
 
-.blue {
-    fill: var(--main);
+.name {
+        fill: none;
+        text {
+            stroke: white;
+        }
 }
+
+.intro {
+        /* fill: ${props => props.theme.mainColor}; */
+        fill: none;
+        text {
+            /* stroke: ${props => props.theme.mainColor} */
+        }
+}
+
 
 .cta {
     color: white;
