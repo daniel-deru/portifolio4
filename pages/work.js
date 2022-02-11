@@ -17,15 +17,17 @@ const work = () => {
     },
     visible: index => ({
       x: 0,
+      rotate: 360,
       transition: {
-        delay: index + 1,
+        duration: 1,
+        delay: index * 0.5,
         ease: "easeOut"
       }
     })
   }
   return(
     <Work>
-        {projectsArray.map((projectGroup) => 
+        {projectsArray.map((projectGroup, groupIndex) => 
           <motion.section>
             {projectGroup.map((project, index) => 
               <motion.div

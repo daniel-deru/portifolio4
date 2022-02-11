@@ -6,6 +6,7 @@ export const Work = styled.div`
     align-items: center;
     flex-direction: column;
     width: 95vw;
+    overflow: hidden;
 
  section {
     width: 80%;

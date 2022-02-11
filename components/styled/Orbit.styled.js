@@ -1,4 +1,13 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const revRotate = keyframes`
+       from {
+            transform: rotateZ('0deg');
+        }
+        to {
+            transform: rotateZ('360deg');
+        }
+`
 
 export const Orbit = styled.div`
     display: flex;
@@ -19,34 +28,15 @@ export const Orbit = styled.div`
         color: white;
     }
 
-    /* .container div:not(div:first-child){
-        opacity: 0;
-    } */
-
     .container div:first-child {
+        position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         color: var(--main);
     }
 
-    .container div:nth-child(2) {
-        /* left: 75px; */
+    .center {
+        /* animation: ${revRotate} 20s linear 3s infinite forwards; */
     }
-    .container div:nth-child(3) {
-
-    }
-    .container div:nth-child(4) {
-
-    }
-    .container div:nth-child(5) {
-
-    }
-    .container div:nth-child(6) {
-
-    }
-    .container div:nth-child(7) {
-
-    }
-
 `
