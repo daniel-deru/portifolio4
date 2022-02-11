@@ -22,6 +22,10 @@ export const HeaderStyle = styled(motion.header)`
 
 .logo {
     width: 100px;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .active {

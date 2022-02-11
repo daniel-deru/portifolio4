@@ -43,5 +43,13 @@ svg {
     font-size: 1.5em;
     border-radius: 5px;
     margin-top: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        background-color: ${({theme}) => theme.mainColor};
+        box-shadow: 0px 0px 7px 3px ${({theme}) => theme.mainColor};
+
+    }
 }
 `

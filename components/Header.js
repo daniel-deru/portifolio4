@@ -34,12 +34,14 @@ const Header = () => {
                 id="logo"
             >
                 <div className="wrapper">
-                    <Image 
-                        src="/logo.png"
-                        width={60}
-                        height={30}
-                        className="logo"
-                    />
+                    <Link href="/">
+                        <Image 
+                            src="/logo.png"
+                            width={60}
+                            height={30}
+                            className="logo"
+                        />
+                    </Link>
                 </div>
 
             </motion.div>

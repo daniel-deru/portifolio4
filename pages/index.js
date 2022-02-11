@@ -18,16 +18,29 @@ export default function Home() {
         duration: 3,
         delay: 1.5,
         fill: {
-          delay: 4,
-          duration: 2
+          delay: 3.5,
+          duration: 1
         },
         strokeWidth: {
-          delay: 6,
+          delay: 4,
           duration: 0.5
         }
       }
 
     })
+  }
+
+  const buttonVariant = {
+    hidden: {
+      opacity: 0
+
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 2,
+      }
+,    }
   }
 
   return (
@@ -54,25 +67,32 @@ export default function Home() {
           </div>
 
           <div>
-                <svg width="1219" height="108" viewBox="0 0 1219 108">
+                <svg width="882" height="86" viewBox="0 0 882 86">
                   {introPathArray.map(path => <motion.path 
                       d={path} 
                       stroke="8" 
-                      stroke="white"
+                      stroke="#ffffff"
                       strokeDasharray="100%"
                       fill="transparent"
       
                       variants={textVariant}
                       initial="hidden"
                       animate="visible"
-                      custom={"white"}
+                      custom={"#ffffff"}
                   />)}
                 </svg>
           </div>
         </div>
 
         <div>
-          <button className="cta">Check Out My Work</button>
+          <motion.button 
+            className="cta"
+
+            variants={buttonVariant}
+            initial="hidden"
+            animate="visible"
+          
+          >Check Out My Work</motion.button>
         </div>
 
       </div>
