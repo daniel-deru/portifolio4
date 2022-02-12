@@ -22,8 +22,8 @@ const skills = () => {
     visible: index => ({
       opacity: 1,
       transition: {
-        duration: 1,
-        delay: (index * 0.2) + 1
+        duration: 0.5,
+        delay: (index * 0.1) + 0.75
       }
     })
   }

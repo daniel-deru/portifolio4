@@ -23,7 +23,8 @@ export const Contact = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        background-color: ${props => props.theme.darkGrey};
+        background-color: rgba(40, 40, 40, 0.4);
+        backdrop-filter: blur(5px);
         width: 30vw;
         aspect-ratio: 1/1;
         text-align: center;
