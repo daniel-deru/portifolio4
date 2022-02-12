@@ -23,7 +23,7 @@ const skills = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: index * 0.3
+        delay: (index * 0.2) + 1
       }
     })
   }
@@ -42,15 +42,13 @@ const skills = () => {
     }
   }
   const statVariant = {
+    hidden: {
+      opacity: 0
+    },
     animate: {
-      rotateZ: -360,
+      opacity: 1,
       transition: {
-        repeat: Infinity,
-        repeateType: "loop",
-        repeateDelay: 0,
-        duration: 20,
-        delay: 3,
-        ease: "linear"
+        duration: 1,
       }
     }
   }
@@ -92,16 +90,14 @@ const skills = () => {
 
           drag
           dragConstraints={{top: 0, right: 0, left: 0, bottom: 0}}
-          style={{rotate: rotateX, x: x}}
-          // variants={rotateVariant}
-          // animate="animate"
-          // custom={360}
+          style={{ x: x}}
           >
             <motion.div
               className="center"
-
-              // variants={statVariant}
-              // animate="animate"
+              id="languages"
+              variants={statVariant}
+              initial="hidden"
+              animate="animate"
             >
               Languages
             </motion.div>
@@ -120,14 +116,64 @@ const skills = () => {
         </Orbit>
 
         <Orbit size={SIZE}>
-            <motion.div className="container" ref={technologyRef}>
-                <div>Technologies</div>
-                {TECHNOLOGIES.map(technology => <div key={technology}>{technology}</div>)}
+            <motion.div 
+              className="container" 
+              ref={technologyRef}
+
+              drag
+              dragConstraints={{top: 0, right: 0, left: 0, bottom: 0}}
+              style={{rotate: rotateX, x: x}}
+              
+              >
+                <motion.div
+                  variants={statVariant}
+                  initial="hidden"
+                  animate="animate"
+                
+                >
+                  Technologies
+                </motion.div>
+                {TECHNOLOGIES.map((technology, index) => 
+                <motion.div 
+                  key={technology}
+
+                  variants={fadeVariant}
+                  initial="hidden"
+                  animate="visible"
+                  custom={index}
+                >
+                  {technology}
+                </motion.div>)}
             </motion.div>
 
-            <motion.div className="container" ref={toolRef}>
-                <div>Tools</div>
-                {TOOLS.map(tool => <div key={tool}>{tool}</div>)}
+            <motion.div 
+              className="container" 
+              ref={toolRef}
+              
+              drag
+              dragConstraints={{top: 0, right: 0, left: 0, bottom: 0}}
+              style={{rotate: rotateX, x: x}}
+              
+              >
+                <motion.div
+                  variants={statVariant}
+                  initial="hidden"
+                  animate="animate"
+
+                >
+                  Tools
+                </motion.div>
+                {TOOLS.map((tool, index) => 
+                  <motion.div 
+                    key={tool}
+
+                    variants={fadeVariant}
+                    initial="hidden"
+                    animate="visible"
+                    custom={index}
+                    >
+                    {tool}
+                  </motion.div>)}
             </motion.div>
         </Orbit>
 

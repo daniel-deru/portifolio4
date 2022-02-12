@@ -1,14 +1,5 @@
 import styled, { keyframes } from "styled-components"
 
-const revRotate = keyframes`
-       from {
-            transform: rotateZ('0deg');
-        }
-        to {
-            transform: rotateZ('360deg');
-        }
-`
-
 export const Orbit = styled.div`
     display: flex;
     justify-content: space-around;
@@ -36,7 +27,12 @@ export const Orbit = styled.div`
         color: var(--main);
     }
 
-    .center {
-        /* animation: ${revRotate} 20s linear 3s infinite forwards; */
+    #languages::after {
+        content: "(Pull me left/right)";
+        display: block;
+        width: max-content;
+        color: white;
+        font-size: 0.75em;
+        margin: auto;
     }
 `
