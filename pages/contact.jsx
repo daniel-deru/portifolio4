@@ -12,6 +12,7 @@ const contact = () => {
     square: {
       clipPath: "polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%)",
       opacity: 0,
+
       transition: {
         duration: 1
       }
@@ -28,11 +29,61 @@ const contact = () => {
       }
     }
   }
+
+  const fadeVariant = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 1.5,
+        duration: 1,
+        ease: "easeOut"
+      }
+    }
+  }
+
+  const slideVariant = {
+    hidden: slide => ({
+      x: slide,
+      opacity: 0
+    }),
+
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      }
+    }
+  }
   return (
     <Contact>
         <motion.section>
-          <div className="small">Don't be shy</div>
-          <div className="large">Say Hi!</div>
+          <motion.div 
+            className="small"
+
+            variants={slideVariant}
+            initial="hidden"
+            animate="visible"
+            custom={-20}
+            >
+              Don't be shy
+            </motion.div>
+          <motion.div 
+            className="large"
+
+            variants={slideVariant}
+            initial="hidden"
+            animate="visible"
+            custom={20}
+          >
+            Say Hi!
+          </motion.div>
         </motion.section>
         <section className="cta-container">
           <motion.div
@@ -40,18 +91,37 @@ const contact = () => {
             initial="square"
             animate="hexagon"
           >
-            <SiGmail  className="icon"/>
-            <span>danielderu3@gmail.com</span>
-            <button>Click Me!</button>
+            <motion.div 
+              className="content-container"
+              
+              variants={fadeVariant}
+              initial="hidden"
+              animate="visible"
+              
+            >
+              <SiGmail  className="icon"/>
+              <span>danielderu3@gmail.com</span>
+              <button>Click Me!</button>
+            </motion.div>
+
           </motion.div>
           <motion.div
             variants={clipVariant}
             initial="square"
             animate="hexagon"
           >
-            <FaWhatsapp className="icon"/>
-            <span>+27 84 712 2240</span>
-            <button>No, Click Me!</button>
+            <motion.div 
+              className="content-container"
+              
+              variants={fadeVariant}
+              initial="hidden"
+              animate="visible"
+              >
+              <FaWhatsapp className="icon"/>
+              <span>+27 84 712 2240</span>
+              <button>No, Click Me!</button>
+            </motion.div>
+
           </motion.div>
         </section>
     </Contact>

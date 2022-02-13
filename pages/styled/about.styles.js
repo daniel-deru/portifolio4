@@ -14,7 +14,7 @@ export const About = styled.div`
         justify-content: center;
         align-items: center;
         /* background-color: ${props => props.theme.darkGrey}; */
-        background-color: rgba(40, 40, 40, 0.5);
+        background-color: rgba(100, 100, 100, 0.2);
         backdrop-filter: blur(5px);
         aspect-ratio: 1/1;
         width: 40vw;
