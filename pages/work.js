@@ -1,29 +1,23 @@
 import { motion } from "framer-motion";
 import { Work } from "./styled/work.styled";
+import Link from "next/link";
 import { useState } from "react"
+import projects from "../projects.json"
+import { useRouter } from "next/router";
+
+import { projectVariant, childVariant } from "../framerVariants/pages/work";
 
 const projectsArray = [
-  [1,2,3],
-  [4,5,6,7],
-  [8,9,10]
+  [projects[0] ,projects[1]],
+  [projects[2], projects[3], projects[4]],
+  [projects[5], projects[6]]
 ]
-let i = 0
 
 const work = () => {
-
-  const projectVariant = {
-    hidden: {
-      x: "100vw"
-    },
-    visible: index => ({
-      x: 0,
-      rotate: 360,
-      transition: {
-        duration: 1,
-        delay: index * 0.5,
-        ease: "easeOut"
-      }
-    })
+  const router = useRouter()
+  
+  const showProject = (project) => {
+    router.push(`work/${project.path}`)
   }
   return(
     <Work>
@@ -31,11 +25,21 @@ const work = () => {
           <motion.section>
             {projectGroup.map((project, index) => 
               <motion.div
+                key={index}
                 variants={projectVariant}
                 initial="hidden"
                 animate="visible"
                 custom={index}
+
+                onClick={() => showProject(project)}
               >
+                <motion.span
+                  variants={childVariant}
+                  animate="visible"
+                  custom={index}
+                >
+                  {project.name}
+                </motion.span>
 
               </motion.div>
             )}

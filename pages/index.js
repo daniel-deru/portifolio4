@@ -52,7 +52,7 @@ export default function Home() {
             <svg width="639" height="100" viewBox="0 0 639 100">
               {namePathArray.map((path, index) => <motion.path 
                 d={path} 
-                stroke="8" 
+                // stroke="8" 
                 stroke="#0080DC"
                 strokeDasharray="100%"
                 fill="transparent"
@@ -70,7 +70,7 @@ export default function Home() {
                 <svg width="882" height="86" viewBox="0 0 882 86">
                   {introPathArray.map(path => <motion.path 
                       d={path} 
-                      stroke="8" 
+                      // stroke="8" 
                       stroke="#ffffff"
                       strokeDasharray="100%"
                       fill="transparent"

@@ -53,6 +53,7 @@ const Sidebar = () => {
           >
             {iconArray.map((icon, index) => 
               <motion.div
+                key={index}
                 className="icon-container"
                 // custom={index}
                 // variants={iconVariant}

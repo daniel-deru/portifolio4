@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Cryptograph",
+        "path": "cryptograph"
+    },
+    {
+        "name": "Pokedex",
+        "path": "pokedex"
+    },
+    {
+        "name": "Charter",
+        "path": "charter"
+    },
+    {
+        "name": "Apple Gym",
+        "path": "applegym"
+    },
+    {
+        "name": "Bookworm Accounting",
+        "path": "bookwormaccounting"
+    },
+    {
+        "name": "CompWiz",
+        "path": "compwiz"
+    },
+    {
+        "name": "WP Smart Commerce",
+        "path": "wpsmartcommerce"
+    }
+]
