@@ -3,7 +3,7 @@ import { SidebarStyle } from "./styled/Sidebar.styled"
 import { FaCodepen, FaGithub, FaYoutube } from "react-icons/fa"
 import { SiReplit, SiCodewars } from "react-icons/si"
 
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 const Sidebar = () => {
 
@@ -31,6 +31,18 @@ const Sidebar = () => {
         }
 
       }
+    },
+    leave: {
+      x: '-200%',
+      opacity: 0,
+      transition: {
+        duration: 1.5,
+        ease: "easeOut",
+        opacity: {
+          duration: 2
+        }
+
+      }
     }
   }
 
@@ -46,11 +58,14 @@ const Sidebar = () => {
   //   })
   // }
 
-  return <SidebarStyle
-            variants={sideBarVariants}
-            initial="hidden"
-            animate="visible"
-          >
+  return <AnimatePresence>
+            <SidebarStyle
+            key="sidebar"
+              variants={sideBarVariants}
+              initial="hidden"
+              animate="visible"
+              exit="leave"
+            >
             {iconArray.map((icon, index) => 
               <motion.div
                 key={index}
@@ -62,7 +77,8 @@ const Sidebar = () => {
               >
                 {icon}
               </motion.div>)}
-        </SidebarStyle>
+              </SidebarStyle>
+        </AnimatePresence>
 }
 
 export default Sidebar

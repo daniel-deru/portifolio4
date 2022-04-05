@@ -5,31 +5,44 @@ import projects from "../../projects.json"
 import { ProjectPage } from '../styled/project.styled'
 import Image from 'next/image'
 
-const project = () => {
+const project = ({currentProject}) => {
     const router = useRouter()
-    const [currentProject, setCurrentProject] = useState()
-
-    const getProject = () => {
-        const { project } = router.query
-        if(!project) router.push("/work")
-        const urlproject = projects.filter(projectName => projectName.path === project)
-        setCurrentProject(urlproject[0])
-    }
 
     useLayoutEffect(() => {
-        getProject()
-    }, [currentProject])
+
+    }, [])
     
     return (
         <ProjectPage>
             <h1>{currentProject && currentProject.name}</h1>
-            <Image src={`/${currentProject.image}`} width="500"/>
+            <p>Create styled graphs quickly and download them as SVG or PNG in any size.</p>
+            <div className='image-container'>
+                <Image src={`/${currentProject.image}`} width="500" height="281"/>
+            </div>
+            
         </ProjectPage>
     )
 }
 
-export const getStaticProps = () => {
-    
+export const getStaticProps = (context) => {
+    console.log(context.params)
+    const urlproject = projects.filter(projectName => {
+       return projectName.path === context.params.project
+    })
+    return {
+        props: {
+            currentProject: urlproject[0]
+        }
+    }
+}
+
+export const getStaticPaths = () => {
+    const projectsArray = projects.map(project => project.path)
+    const paths = projectsArray.map(path => ({params: {project: path}}))
+    return {
+        paths,
+        fallback: false
+    }
 }
 
 export default project
