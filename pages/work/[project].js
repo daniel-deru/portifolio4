@@ -1,7 +1,9 @@
 import React from 'react'
 import { useRouter } from 'next/dist/client/router'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useLayoutEffect } from 'react'
 import projects from "../../projects.json"
+import { ProjectPage } from '../styled/project.styled'
+import Image from 'next/image'
 
 const project = () => {
     const router = useRouter()
@@ -14,12 +16,20 @@ const project = () => {
         setCurrentProject(urlproject[0])
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         getProject()
     }, [currentProject])
+    
     return (
-        <div>{currentProject && currentProject.name}</div>
+        <ProjectPage>
+            <h1>{currentProject && currentProject.name}</h1>
+            <Image src={`/${currentProject.image}`} width="500"/>
+        </ProjectPage>
     )
+}
+
+export const getStaticProps = () => {
+    
 }
 
 export default project

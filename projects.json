@@ -1,30 +1,37 @@
 [
     {
         "name": "Cryptograph",
-        "path": "cryptograph"
+        "path": "cryptograph",
+        "image": "cryptograph.png"
     },
     {
         "name": "Pokedex",
-        "path": "pokedex"
+        "path": "pokedex",
+        "image": "pokedex.png"
     },
     {
         "name": "Charter",
-        "path": "charter"
+        "path": "charter",
+        "image": "charter.png"
     },
     {
         "name": "Apple Gym",
-        "path": "applegym"
+        "path": "applegym",
+        "image": "apple gym.png"
     },
     {
         "name": "Bookworm Accounting",
-        "path": "bookwormaccounting"
+        "path": "bookwormaccounting",
+        "image": "Bookworm accounting.png"
     },
     {
         "name": "CompWiz",
-        "path": "compwiz"
+        "path": "compwiz",
+        "image": "CompWiz.png"
     },
     {
         "name": "WP Smart Commerce",
-        "path": "wpsmartcommerce"
+        "path": "wpsmartcommerce",
+        "image": "cryptograph.png"
     }
 ]
