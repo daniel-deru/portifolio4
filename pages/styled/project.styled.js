@@ -1,32 +1,22 @@
 import styled, { keyframes } from "styled-components"
 
-const shapeAnim = keyframes`
-    0% {
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-    }
-    28% {
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-    }
-    33% {
-        clip-path: polygon(100% 25%, 100% 100%, 0 75%, 0 0);
-    }
-    61% {
-        clip-path: polygon(100% 25%, 100% 100%, 0 75%, 0 0);
-    }
-    66% {
-        clip-path: polygon(80% 0, 100% 100%, 0 100%, 20% 0);
-    }
-    95% {
-        clip-path: polygon(80% 0, 100% 100%, 0 100%, 20% 0);
-    }
-    100% {
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-    }
+const enterAnim = keyframes`
+   from {
+       opacity: 0;
+   }
+   to {
+       opacity: 1;
+   }
 `
 
 export const ProjectPage = styled.main`
     width: 100vw;
+    margin-top: 2rem;
     text-align: center;
+    animation: ${enterAnim} 1s ease-in-out;
+    h1 {
+        font-size: 2em;
+    }
 
     .link-container {
         margin: 2rem auto;
@@ -48,8 +38,14 @@ export const ProjectPage = styled.main`
             grid-template-columns: 1fr 1fr;
             position: relative;
             margin: auto;
+            /* color: #b8b8b8; */
             > * {
                 position: absolute;
+            }
+            .middle {
+                top: 40%;
+                left: 40%;
+                transform: translate(-50%, -50%);
             }
         }
 

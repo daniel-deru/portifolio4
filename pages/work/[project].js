@@ -4,7 +4,19 @@ import { useEffect, useState, useRef, useLayoutEffect  } from 'react'
 import { motion } from 'framer-motion'
 import projects from "../../projects.json"
 import { ProjectPage } from '../styled/project.styled'
-import Image from 'next/image'
+
+const stackVariant = {
+    animate: {
+        rotate: 360,
+        transition: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 40,
+            repeatDelay: 0,
+            ease: "linear"
+        }
+    }
+}
 
 const project = ({currentProject}) => {
     const router = useRouter()
@@ -32,12 +44,18 @@ const project = ({currentProject}) => {
            
             
             <div className='main-container' >
-                <div className='stack-container' ref={containerRef}>
-                    <div></div>
+                <motion.div 
+                className='stack-container' 
+                ref={containerRef}
+
+                variants={stackVariant}
+                animate="animate"
+                >
+                    <div className='middle'></div>
                     {currentProject.stack.map(stackItem => (
                         <div key={stackItem}>{stackItem}</div>
                     ))}
-                </div>
+                </motion.div>
                 <p>
                     <div className='link-container'>
                         <a href={currentProject.url} target="_blank">Demo</a>

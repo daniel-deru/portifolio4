@@ -6,7 +6,7 @@
         "github": "https://github.com/daniel-deru/react-cryptograpg",
         "url": "https://cryptograph.danielderu.net",
         "description": "Encode your messages in your favorite base or format and optionally add an encryption key to make sure the message is safe. The AES encryption is used for the secret key.",
-        "stack": ["TypeScript", "ReactJS", "Redux", "Styled-C", "Framer Motion", "NodeJS", "ExpressJS"]
+        "stack": ["TypeScript", "ReactJS", "Redux", "Styled-Components", "Framer Motion", "NodeJS", "ExpressJS"]
     },
     {
         "name": "Pokedex",
@@ -57,7 +57,7 @@
         "name": "WP Smart Commerce",
         "path": "wpsmartcommerce",
         "image": "Commerce.png",
-        "github": "",
+        "github": "https://danielderu.net/work",
         "url": "https://wp.danielderu.net",
         "description": "This is a commercial project I developed for my current company. It is a WordPress plugin that allows users to easily create and edit products with the WooCommerce API. This means site admins don't need to waste time changing small stuff like prices and also don't need to be worried about the client breaking the site after changing a setting accidentally or needing to train the client on how to use WordPress as the interface is easy to understand. **I have explicit consent to display this project**. This product falls under the GPL license which is why I can add it to my portfolio. The source code is legally allowed to be distributed because of the license but due to this being a commercial product I will not have a link to the source code. You can however test it out in a playground.",
         "stack": ["JavaScript", "CSS", "HTML", "PHP", "WordPress"]
