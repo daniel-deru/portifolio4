@@ -7,8 +7,6 @@ import { Skills } from "./styled/skills.styled";
 const skills = () => {
   const x = useMotionValue(0)
   const rotateX = useTransform(x, [-150, 150], [-90, 90])
-  const y = useMotionValue(0)
-  const rotateY = useTransform(x, [-150, 150], [-90, 90])
 
   const LANGUAGES = ["HTML", "CSS", "JavaScript", "PHP", "Python", "C++", "TypeScript"]
   const TECHNOLOGIES = ["ReactJS", "NextJS", "Django",  "PyQt", "Bootstrap", "Sass", "GSAP"]
@@ -129,7 +127,6 @@ const skills = () => {
                   variants={statVariant}
                   initial="hidden"
                   animate="animate"
-                
                 >
                   Technologies
                 </motion.div>

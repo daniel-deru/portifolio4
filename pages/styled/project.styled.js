@@ -27,28 +27,42 @@ const shapeAnim = keyframes`
 export const ProjectPage = styled.main`
     width: 100vw;
     text-align: center;
-    .container {
-        position: relative;
-        aspect-ratio: 16/9;
-        margin: auto;
-        width: 60vw;
-        background-color: ${({theme}) => theme.mainColor};
-        animation: ${shapeAnim} 20s ease-in-out 2s infinite forwards;
 
-        & > *{
-            position: absolute;
+    .link-container {
+        margin: 2rem auto;
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            color: ${({theme}) => theme.mainColor}
         }
-
-        img {
-            width: 60vw;
-            aspect-ratio: 16/9;
-            top: 0;
-            left: 0;
+    }
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+        place-items: center;
+        .stack-container {
+            width: 350px;
+            aspect-ratio: 1/1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            margin: auto;
+            > * {
+                position: absolute;
+            }
         }
 
         p {
-            top: 50%;
-            transform: translateY(-50%);
+                line-height: 2rem;
+                width: 80%;
         }
+
+    }
+
+    img {   
+            margin: 8rem;
+            width: 60vw;
+            aspect-ratio: 16/9;
     }
 `

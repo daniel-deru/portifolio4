@@ -15,6 +15,7 @@ body {
   font-family: 'Gugi', cursive;
   color: white;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 a {
@@ -33,4 +34,17 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0080db;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #5b5b5b;
+}
+
 
