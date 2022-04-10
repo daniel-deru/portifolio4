@@ -50,7 +50,7 @@ export const ProjectPage = styled.main`
         }
 
         p {
-                line-height: 2rem;
+                /* line-height: 2rem; */
                 width: 80%;
         }
 
