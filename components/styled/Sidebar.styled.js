@@ -11,6 +11,8 @@ export const SidebarStyle = styled(motion.aside)`
     width: 5vw;
     margin: 3rem 0px;
     justify-content: space-between;
+    z-index: 0;
+    position: relative;
 
     @media (max-width: 1000px) {
         width: 10vw;
@@ -21,6 +23,7 @@ export const SidebarStyle = styled(motion.aside)`
     }
 
     @media (max-width: 500px) {
+        z-index: 0;
         flex-direction: row;
         border-right: none;
         border-top: 2px solid white;

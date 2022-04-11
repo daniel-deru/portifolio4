@@ -5,13 +5,14 @@ import { Orbit } from "../components/styled/Orbit.styled";
 import { Skills } from "./styled/skills.styled";
 
 const skills = () => {
+  const [SIZE, SetSIZE] = useState(250)
   const x = useMotionValue(0)
   const rotateX = useTransform(x, [-150, 150], [-90, 90])
 
   const LANGUAGES = ["HTML", "CSS", "JavaScript", "PHP", "Python", "C++", "TypeScript"]
   const TECHNOLOGIES = ["ReactJS", "NextJS", "Django",  "PyQt", "Bootstrap", "Sass", "GSAP"]
   const TOOLS = ["NodeJS", "Git", "Wordpress",  "Photoshop", "cPanel", "WHM", "WHMCS"]
-  const SIZE = 250
+
 
   const fadeVariant = {
     hidden: {
@@ -56,12 +57,21 @@ const skills = () => {
   const technologyRef = useRef()
   const toolRef = useRef()
 
+  const changeSize = () => {
+    if(window.innerWidth <= 1000 && window.innerWidth > 700) SetSIZE(200)
+    if(window.innerWidth > 1000) SetSIZE(250)
+    if(window.innerWidth <= 700) SetSIZE(150)
+  }
+
   useEffect(() => {
     console.log(languageRef.current.children)
     let languageRotate = rotate(languageRef.current.children, LANGUAGES)
     let techRotate = rotate(technologyRef.current.children, TECHNOLOGIES)
     let toolRotate = rotate(toolRef.current.children, TOOLS)
-  }, [languageRef])
+    window.addEventListener("resize", () => changeSize())
+    changeSize()
+    console.log("hello")
+  }, [languageRef, SIZE])
   
 
   const rotate = (nodeList, items) => {

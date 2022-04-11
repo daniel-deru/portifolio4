@@ -5,6 +5,10 @@ export const Orbit = styled.div`
     justify-content: space-around;
     align-items: center;
 
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
+
     &:last-child {
         margin-top: -100px;
     }
@@ -12,6 +16,17 @@ export const Orbit = styled.div`
         width: 250px;
         height: 250px;
         position: relative;
+        @media (max-width: 1000px) {
+            width: 200px;
+            height: 200px;
+        }
+        @media (max-width: 700px) {
+            width: 150px;
+            height: 150px;
+        }
+        @media (max-width: 500px) {
+            margin: 20px auto;
+        }
     }
 
     .container div {

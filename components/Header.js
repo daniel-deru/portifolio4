@@ -81,7 +81,7 @@ const Header = () => {
                     {LINKS.map(function(link, index){
                         let path = `/${link.toLocaleLowerCase()}`
                         return (
-                            <motion.li  key={link}>
+                            <motion.li  key={link} onClick={() => setNavOpen(!navOpen)}>
                                 <Link href={path}>
                                     <a className={router.pathname == path ? "active" : "link"}>{link}</a>
                                 </Link>
