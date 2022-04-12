@@ -8,12 +8,33 @@ import { motion, AnimatePresence } from "framer-motion"
 const Sidebar = () => {
 
   const iconArray = [
-    <FaCodepen />, 
-    <FaGithub />,  
-    <FaYoutube />, 
-    <SiReplit />, 
-    <SiCodewars />
+    {
+      icon: <FaCodepen />,
+      url: "https://codepen.io/daniel-deru"
+    },
+    {
+      icon: <FaGithub />, 
+      url: "https://github.com/daniel-deru"
+    },
+    {
+      icon: <FaYoutube />, 
+      url: "https://www.youtube.com/channel/UC-c15g_qvx6j4hQ5U5Rc-aw"
+    },
+    {
+      icon:  <SiReplit />, 
+      url: "https://replit.com/@daniel-deru"
+    },
+    {
+      icon:  <SiCodewars />,
+      url: "https://www.codewars.com/users/danielIsAwesomeAtCoding"
+    }
+     
+     
+    
+   
+   
     ]
+
 
   const sideBarVariants = {
     hidden: {
@@ -75,7 +96,9 @@ const Sidebar = () => {
                 // initial="hidden"
                 // animate="visible"
               >
-                {icon}
+                <a href={icon.url}>
+                  {icon.icon}
+                </a>
               </motion.div>)}
               </SidebarStyle>
         </AnimatePresence>

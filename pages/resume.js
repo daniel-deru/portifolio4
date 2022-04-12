@@ -1,8 +1,9 @@
+import { ResumePage } from "./styled/resume.styled";
 const resume = () => {
   return (
-    <div>
-        <h1>Resume Page</h1>
-    </div>
+    <ResumePage>
+        <iframe src="/daniel resume.pdf"></iframe>
+    </ResumePage>
     );
 };
 

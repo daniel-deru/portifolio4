@@ -8,6 +8,8 @@ export const LayoutStyle = styled.div`
        
         @media (max-width: 500px) {
             flex-direction: column-reverse;
+            justify-content: space-between;
+            height: 80vh;
         }
     }
 `

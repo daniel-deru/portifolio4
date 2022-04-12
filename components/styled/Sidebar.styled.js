@@ -35,7 +35,12 @@ export const SidebarStyle = styled(motion.aside)`
     & > * {
         font-size: 2em;
         margin: 20px auto;
+       
 
+    }
+
+    a {
+        color:  var(--main);
     }
 
 

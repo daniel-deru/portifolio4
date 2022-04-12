@@ -14,6 +14,7 @@ export const ProjectPage = styled.main`
     margin-top: 2rem;
     text-align: center;
     animation: ${enterAnim} 1s ease-in-out;
+    height: 80vh;
     h1 {
         font-size: 2em;
     }
@@ -31,6 +32,11 @@ export const ProjectPage = styled.main`
         grid-template-columns: 1fr 1fr;
         margin: auto;
         place-items: center;
+
+        @media (max-width: 800px) {
+            grid-template-columns: 1fr;
+        }
+        
         .stack-container {
             width: 350px;
             aspect-ratio: 1/1;
@@ -38,14 +44,18 @@ export const ProjectPage = styled.main`
             grid-template-columns: 1fr 1fr;
             position: relative;
             margin: auto;
-            /* color: #b8b8b8; */
+
+
+
             > * {
                 position: absolute;
             }
+
             .middle {
                 top: 40%;
                 left: 40%;
                 transform: translate(-50%, -50%);
+
             }
         }
 
