@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HomeStyle = styled.div`
+export default styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

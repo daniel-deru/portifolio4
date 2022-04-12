@@ -1,5 +1,5 @@
 import { useState, useEffect} from "react"
-import { HomeStyle } from './styled/index.styled'
+import HomeStyle from './styled/index.styled'
 import { motion } from "framer-motion"
 import SVG from '../components/SVG'
 
@@ -34,7 +34,7 @@ export default function Home() {
       <div className='home-container'>
 
         <div>
-          {isMobile ? <div className="mobile-name">Hi, I'm Daniel.</div> : <SVG name="name"/> }
+          {isMobile ? <div className="mobile-name">Hi, I&apos;m Daniel.</div> : <SVG name="name"/> }
           {isMobile ? <div className="mobile-intro" >Welcome to my portfolio</div> : <SVG name="intro"/>}
         </div>
 

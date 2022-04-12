@@ -1,4 +1,4 @@
-import { Contact } from "./styled/contact.styled";
+import ContactPage from "./styled/contact.styled";
 import { FaWhatsapp } from "react-icons/fa"
 import { SiGmail } from "react-icons/si"
 
@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 // polygon(0 0, 100% 0, 100% 100%, 0% 100%)
 // polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%)
-const contact = () => {
+const Contact = () => {
 
   const clipVariant = {
     square: {
@@ -62,7 +62,7 @@ const contact = () => {
     }
   }
   return (
-    <Contact>
+    <ContactPage>
         <motion.section>
           <motion.div 
             className="small"
@@ -72,7 +72,7 @@ const contact = () => {
             animate="visible"
             custom={-20}
             >
-              Don't be shy
+              Don&apos;t be shy
             </motion.div>
           <motion.div 
             className="large"
@@ -124,8 +124,8 @@ const contact = () => {
 
           </motion.div>
         </section>
-    </Contact>
+    </ContactPage>
   );
 };
 
-export default contact;
+export default Contact;

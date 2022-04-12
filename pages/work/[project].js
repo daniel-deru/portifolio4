@@ -18,7 +18,7 @@ const stackVariant = {
     }
 }
 
-const project = ({currentProject}) => {
+const Project = ({currentProject}) => {
     const router = useRouter()
     const containerRef = useRef()
     const rotate = (nodeList, items) => {
@@ -58,8 +58,8 @@ const project = ({currentProject}) => {
                 </motion.div>
                 <p>
                     <div className='link-container'>
-                        <a href={currentProject.url} target="_blank">Demo</a>
-                        <a href={currentProject.github} target="_blank">Code</a>
+                        <a href={currentProject.url} target="_blank" rel="noreferrer">Demo</a>
+                        <a href={currentProject.github} target="_blank" rel="noreferrer">Code</a>
                     </div>
                     {currentProject.description}
                 </p>
@@ -93,4 +93,4 @@ export const getStaticPaths = () => {
     }
 }
 
-export default project
+export default Project

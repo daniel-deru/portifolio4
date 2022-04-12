@@ -9,7 +9,7 @@ const enterAnim = keyframes`
    }
 `
 
-export const ProjectPage = styled.main`
+export default styled.main`
     width: 100vw;
     margin-top: 2rem;
     text-align: center;

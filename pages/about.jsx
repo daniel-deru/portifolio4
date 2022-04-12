@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { About } from "./styled/about.styles";
+import AboutPage from "./styled/about.styles";
 import { motion } from "framer-motion";
 
-const about = () => {
+const About = () => {
   const [polyWidth, setPolyWidth] = useState("40vw")
   const growVariant = {
     hidden: {
@@ -45,7 +45,7 @@ const about = () => {
   }, [polyWidth])
   
   return (
-    <About>
+    <AboutPage>
       <div className="wrapper">
         <motion.section
             variants={growVariant}
@@ -99,8 +99,8 @@ const about = () => {
           </motion.section>
       </div>
         
-    </About>
+    </AboutPage>
   );
 };
 
-export default about;
+export default About;

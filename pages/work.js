@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Work } from "./styled/work.styled";
+import WorkPage from "./styled/work.styled";
 import Link from "next/link";
 import { useState } from "react"
 import projects from "../projects.json"
@@ -13,16 +13,16 @@ const projectsArray = [
   [projects[5], projects[6]]
 ]
 
-const work = () => {
+const Work = () => {
   const router = useRouter()
   
   const showProject = (project) => {
     router.push(`work/${project.path}`)
   }
   return(
-    <Work>
+    <WorkPage>
         {projectsArray.map((projectGroup, groupIndex) => 
-          <motion.section>
+          <motion.section key={groupIndex}>
             {projectGroup.map((project, index) => 
               <motion.div
                 key={index}
@@ -45,8 +45,8 @@ const work = () => {
             )}
           </motion.section>
         ) }
-    </Work>
+    </WorkPage>
   );
 };
 
-export default work;
+export default Work;

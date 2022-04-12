@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Contact = styled.div`
+export default styled.div`
     text-align: center;
     width: 95vw;
     margin-top: 1rem;

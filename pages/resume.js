@@ -1,5 +1,5 @@
-import { ResumePage } from "./styled/resume.styled";
-const resume = () => {
+import ResumePage from "./styled/resume.styled";
+const Resume = () => {
   return (
     <ResumePage>
         <iframe src="/daniel resume.pdf"></iframe>
@@ -7,4 +7,4 @@ const resume = () => {
     );
 };
 
-export default resume;
+export default Resume;

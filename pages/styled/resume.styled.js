@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const ResumePage = styled.main`
+export default styled.main`
     width: 90vw;
     margin: auto;
     iframe {

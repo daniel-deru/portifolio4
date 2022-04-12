@@ -2,9 +2,9 @@ import { useRef, useState, useEffect } from "react"
 import { motion, useTransform, useMotionValue } from "framer-motion"
 
 import { Orbit } from "../components/styled/Orbit.styled";
-import { Skills } from "./styled/skills.styled";
+import SkillsPage  from "./styled/skills.styled";
 
-const skills = () => {
+const Skills = () => {
   const [SIZE, SetSIZE] = useState(250)
   const x = useMotionValue(0)
   const rotateX = useTransform(x, [-150, 150], [-90, 90])
@@ -90,7 +90,7 @@ const skills = () => {
   }
 
   return (
-    <Skills>
+    <SkillsPage>
         <Orbit size={SIZE}>
           <motion.div 
           className="container"  
@@ -184,8 +184,8 @@ const skills = () => {
             </motion.div>
         </Orbit>
 
-    </Skills>
+    </SkillsPage>
   );
 };
 
-export default skills;
+export default Skills;
