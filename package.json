@@ -1,6 +1,7 @@
 {
   "name": "portifolio4",
   "private": true,
+  "homepage": "https://danielderu.net",
   "scripts": {
     "dev": "next",
     "build": "next build && next export",

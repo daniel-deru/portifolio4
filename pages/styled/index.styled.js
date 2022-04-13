@@ -75,5 +75,9 @@ svg {
     @media (max-width: 500px) {
         margin: 3rem auto 0px auto;
     }
+
+    a {
+        color: white;
+    }
 }
 `

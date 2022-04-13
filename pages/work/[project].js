@@ -3,7 +3,7 @@ import { useRouter } from 'next/dist/client/router'
 import { useEffect, useState, useRef, useLayoutEffect  } from 'react'
 import { motion } from 'framer-motion'
 import projects from "../../projects.json"
-import { ProjectPage } from '../styled/project.styled'
+import  ProjectPage  from '../styled/project.styled'
 
 const stackVariant = {
     animate: {
@@ -85,6 +85,7 @@ export const getStaticProps = (context) => {
 }
 
 export const getStaticPaths = () => {
+    console.log("hello")
     const projectsArray = projects.map(project => project.path)
     const paths = projectsArray.map(path => ({params: {project: path}}))
     return {

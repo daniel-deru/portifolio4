@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { HeaderStyle } from "./styled/Header.styled";
 import {FaBars, FaTimes} from "react-icons/fa"
-import Image from "next/image";
+// import Image from "next/image";
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
@@ -56,7 +56,7 @@ const Header = () => {
             >
                 <div className="wrapper">
                     <Link href="/">
-                        <Image 
+                        <img 
                             src="/logo.png"
                             width={60}
                             height={30}

@@ -10,7 +10,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  background-image: url("../public/hexagon.jpg");
+  background-image: url("/hexagon.jpg");
   background-size: cover;
   font-family: 'Gugi', cursive;
   color: white;

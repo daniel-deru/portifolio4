@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { useState, useEffect} from "react"
 import HomeStyle from './styled/index.styled'
 import { motion } from "framer-motion"
@@ -44,9 +45,11 @@ export default function Home() {
 
             variants={buttonVariant}
             initial="hidden"
-            animate="visible"
-          
-          >Check Out My Work</motion.button>
+            animate="visible"         
+          >
+            <Link href="/work">Check Out My Work</Link>
+            
+          </motion.button>
         </div>
 
       </div>
