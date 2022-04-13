@@ -87,6 +87,11 @@ export default styled.div`
                 background-color: ${({theme}) => theme.mainColor};
                 box-shadow: 0px 0px 5px 3px ${({ theme }) => theme.mainColor};
             }
+
+            a {
+                color: white;
+                font-size: inherit;
+            }
         }
     }
 

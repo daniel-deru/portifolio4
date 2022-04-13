@@ -25,7 +25,7 @@ export const Orbit = styled.div`
             height: 150px;
         }
         @media (max-width: 500px) {
-            margin: 20px auto;
+            margin: 50px auto;
         }
     }
 

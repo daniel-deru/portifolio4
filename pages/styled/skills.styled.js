@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export default styled.div`
     width: 95vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -15,7 +16,7 @@ export default styled.div`
     }
 
     @media (max-width: 500px) {
-        height: 120vh;
+        height: 100vh;
     }
 
 `

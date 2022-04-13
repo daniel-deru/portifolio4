@@ -101,7 +101,11 @@ const Contact = () => {
             >
               <SiGmail  className="icon"/>
               <span>danielderu3@gmail.com</span>
-              <button>Click Me!</button>
+              <button>
+                <a href="mailto:danielderu3@gmail.com">
+                  Click Me!
+                </a>  
+              </button>
             </motion.div>
 
           </motion.div>
@@ -119,7 +123,11 @@ const Contact = () => {
               >
               <FaWhatsapp className="icon"/>
               <span>+27 84 712 2240</span>
-              <button>No, Click Me!</button>
+              <button>
+                <a href="tel:+27847122240">
+                  No, Click Me!
+                  </a>
+              </button>
             </motion.div>
 
           </motion.div>

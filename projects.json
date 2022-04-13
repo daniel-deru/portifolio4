@@ -2,7 +2,7 @@
     {
         "name": "Cryptograph",
         "path": "cryptograph",
-        "image": "cryptograph.png",
+        "image": "cryptograph.PNG",
         "github": "https://github.com/daniel-deru/react-cryptograpg",
         "url": "https://cryptograph.danielderu.net",
         "description": "Encode your messages in your favorite base or format and optionally add an encryption key to make sure the message is safe. The AES encryption is used for the secret key.",
@@ -11,7 +11,7 @@
     {
         "name": "Pokedex",
         "path": "pokedex",
-        "image": "pokedex.png",
+        "image": "pokedex.PNG",
         "github": "https://github.com/daniel-deru/react-pokedex",
         "url": "https://pokedex.danielderu.net",
         "description": "This project uses the famous pokeapi. Find your favorite pokemon in the menu and check out its picture and stats. I'm planning to expand this project in the future to make better use of the very extensive pokeapi.",
@@ -20,7 +20,7 @@
     {
         "name": "Charter",
         "path": "charter",
-        "image": "charter.png",
+        "image": "charter.PNG",
         "github": "https://github.com/daniel-deru/GraphMate",
         "url": "https://charter.danielderu.net",
         "description": "Create stylish charts and download them in PNG or SVG at any size.",
@@ -29,7 +29,7 @@
     {
         "name": "Apple Gym",
         "path": "applegym",
-        "image": "apple gym.png",
+        "image": "apple gym.PNG",
         "github": "https://github.com/daniel-deru/applegym",
         "url": "https://applegym.danielderu.net",
         "description": "Just a design inspired by Apple like designs",
@@ -38,7 +38,7 @@
     {
         "name": "Bookworm Accounting",
         "path": "bookwormaccounting",
-        "image": "Bookworm accounting.png",
+        "image": "Bookworm accounting.PNG",
         "github": "https://github.com/daniel-deru/accounting",
         "url": "https://accounting.danielderu.net",
         "description": "a Fun design to play with.",
@@ -47,7 +47,7 @@
     {
         "name": "CompWiz",
         "path": "compwiz",
-        "image": "CompWiz.png",
+        "image": "CompWiz.PNG",
         "github": "https://github.com/daniel-deru/project-compwiz",
         "url": "https://compwiz.danielderu.net",
         "description": "Experimenting with gradients are fun.",
@@ -56,7 +56,7 @@
     {
         "name": "WP Smart Commerce",
         "path": "wpsmartcommerce",
-        "image": "Commerce.png",
+        "image": "Commerce.PNG",
         "github": "https://danielderu.net/work",
         "url": "https://wp.danielderu.net/wp-smart-product",
         "description": "This is a commercial project I developed for my current company. It is a WordPress plugin that allows users to easily create and edit products with the WooCommerce API. This means site admins don't need to waste time changing small stuff like prices and also don't need to be worried about the client breaking the site after changing a setting accidentally or needing to train the client on how to use WordPress as the interface is easy to understand. **I have explicit consent to display this project**. This product falls under the GPL license which is why I can add it to my portfolio. The source code is legally allowed to be distributed because of the license but due to this being a commercial product I will not have a link to the source code. You can however test it out in a playground.",
