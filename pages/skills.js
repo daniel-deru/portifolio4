@@ -10,8 +10,8 @@ const Skills = () => {
   const rotateX = useTransform(x, [-150, 150], [-90, 90])
 
   const LANGUAGES = ["HTML", "CSS", "JavaScript", "PHP", "Python", "C++", "TypeScript"]
-  const TECHNOLOGIES = ["ReactJS", "NextJS", "Framer",  "PyQt", "Bootstrap", "Sass", "GSAP"]
-  const TOOLS = ["NodeJS", "Git", "Wordpress",  "Photoshop", "cPanel", "WHM", "WHMCS"]
+  const TECHNOLOGIES = ["ReactJS", "NextJS", "Framer",  "PyQt", "React Native", "Sass", "GSAP"]
+  const TOOLS = ["NodeJS", "Git", "Wordpress",  "Figma", "cPanel", "WHM", "WHMCS"]
 
 
   const fadeVariant = {

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Head from "next/head"
 import { useState, useEffect} from "react"
 import HomeStyle from './styled/index.styled'
 import { motion } from "framer-motion"

@@ -7,12 +7,6 @@ import { useRouter } from "next/router";
 
 import { projectVariant, childVariant } from "../framerVariants/pages/work";
 
-const projectsArray = [
-  [projects[0] ,projects[1]],
-  [projects[2], projects[3], projects[4]],
-  [projects[5], projects[6]]
-]
-
 const Work = () => {
   const router = useRouter()
   
@@ -21,29 +15,30 @@ const Work = () => {
   }
   return(
     <WorkPage>
-        {projectsArray.map((projectGroup, groupIndex) => 
-          <motion.section key={groupIndex}>
-            {projectGroup.map((project, index) => 
-              <motion.div
-                key={index}
-                variants={projectVariant}
-                initial="hidden"
-                animate="visible"
-                custom={index}
-
-                onClick={() => showProject(project)}
-              >
-                <motion.span
-                  variants={childVariant}
+        {projects.map((project, index) => {
+          
+          return (<motion.section key={index}>
+             
+                <motion.div
+                  key={index}
+                  variants={projectVariant}
+                  initial="hidden"
                   animate="visible"
                   custom={index}
-                >
-                  {project.name}
-                </motion.span>
 
-              </motion.div>
-            )}
-          </motion.section>
+                  onClick={() => showProject(project)}
+                >
+                  <motion.span
+                    variants={childVariant}
+                    animate="visible"
+                    custom={index}
+                  >
+                    {project.name}
+                  </motion.span>
+
+                </motion.div>
+            
+            </motion.section>)}
         ) }
     </WorkPage>
   );
