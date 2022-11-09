@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from "react"
 import { motion, useTransform, useMotionValue } from "framer-motion"
 
+// https://dev.to/holdmypotion/react-marquee-in-framer-motion-3d5a
+
 import { Orbit } from "../components/styled/Orbit.styled";
 import SkillsPage  from "./styled/skills.styled";
 

@@ -1,11 +1,11 @@
 [    {
         "name": "TrustLock",
         "path": "trustlock",
-        "image": "Bookworm accounting.PNG",
-        "github": "https://github.com/daniel-deru/accounting",
-        "url": "https://accounting.danielderu.net",
-        "description": "An encrypted password manager with built in crypto features.",
-        "stack": ["Python", "PyQt", "cryptography"]
+        "image": "TrustLock.png",
+        "github": "https://github.com/daniel-deru/trustlock-free",
+        "url": "https://trustlock.danielderu.net",
+        "description": "An encrypted desktop password manager with built in crypto features, todo-list, notepad and tons of customisability. Originally started as an internal tool that I made myself. My boss was impressed with it and decided we should turn it into a real world product. This is the free version",
+        "stack": ["Python", "PyQt", "cryptography", "SQLite", "OOP"]
     },
     {
         "name": "Cryptograph",
@@ -13,7 +13,7 @@
         "image": "cryptograph.PNG",
         "github": "https://github.com/daniel-deru/react-cryptograpg",
         "url": "https://cryptograph.danielderu.net",
-        "description": "Encode your messages in your favorite base or format and optionally add an encryption key to make sure the message is safe. The AES encryption is used for the secret key.",
+        "description": "Encode your messages in your favorite base or format and optionally add an encryption key to make sure the message is safe. The AES encryption is used for the secret key. I just thought it was a cool project to build.",
         "stack": ["TypeScript", "ReactJS", "Redux", "Styled-Components", "Framer Motion", "NodeJS", "ExpressJS"]
     },
     {
@@ -22,7 +22,7 @@
         "image": "charter.PNG",
         "github": "https://github.com/daniel-deru/GraphMate",
         "url": "https://charter.danielderu.net",
-        "description": "Create stylish charts and download them in PNG or SVG at any size.",
+        "description": "Create stylish charts and download them in PNG or SVG at any size. This was a final project for a computer science course. I liked the idea of making cool charts.",
         "stack": ["JavaScript", "ReactJS", "Redux", "NodeJS", "ExpressJS"]
     },
     {
