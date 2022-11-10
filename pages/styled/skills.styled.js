@@ -1,57 +1,50 @@
 import styled from "styled-components";
 
 export default styled.div`
+  width: 80%;
+  margin: auto;
+  /* margin-top: 3rem; */
+
+  .ticker, .reverse {
+    line-height: ${({theme}) => theme.skillContainerHeight};
+    height: ${({theme}) => theme.skillContainerHeight};
+  }
+
   .ticker {
     position: relative;
-    /* height: 206px; */
-    height: 100px;
-    width: 505px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     overflow: hidden;
   }
 
-  .track:not(.reverse .track) {
-    /* left: 0; */
+  .track {
     white-space: nowrap;
   }
 
   .item {
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    background-color: ${({theme}) => theme.mainColor};
+    height: 100px;
+    line-height: 100px;
     display: inline-block;
-    /* margin: 10px; */
-    width: 100px;
+    width: ${({itemWidth}) => itemWidth+"px"};
     text-align: center;
+
+    /* &:nth-child(odd) {
+      border-bottom: 1px solid ${({theme}) => theme.mainColor};
+      border-top: 1px solid ${({theme}) => theme.mainColor};
+    }
+    &:nth-child(even) {
+      color: ${({theme}) => theme.mainColor};
+    } */
   }
 
-  .reverse {
+  /* .reverse {
     height: 100px;
-  }
+  } */
 
   .reverse .track {
-    white-space: nowrap;
     position: absolute;
     right: 0px;
-    
-
   }
 
 `
-// export default styled.div`
-//     width: 95vw;
-//     height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-around;
-//     overflow: hidden;
-
-//     @media (max-width: 1000px) {
-//         font-size: 0.8em;
-//     }
-//     @media (max-width: 1000px) {
-//         height: 80vh;
-//     }
-
-//     @media (max-width: 500px) {
-//         height: 100vh;
-//     }
-
-// `

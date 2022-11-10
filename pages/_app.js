@@ -7,6 +7,7 @@ import { ThemeProvider } from "styled-components"
 const theme = {
   mainColor: "#0080db",
   darkGrey: "#282828",
+  skillContainerHeight: "200px"
 }
 
 function MyApp({ Component, pageProps }) {
