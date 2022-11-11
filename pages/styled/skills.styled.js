@@ -3,7 +3,8 @@ import styled from "styled-components";
 export default styled.div`
   width: 80%;
   margin: auto;
-  /* margin-top: 3rem; */
+  box-shadow: inset 20px 0 15px -15px ${({theme}) => theme.mainColor},
+              inset -20px 0 15px -15px ${({theme}) => theme.mainColor};
 
   .ticker, .reverse {
     line-height: ${({theme}) => theme.skillContainerHeight};
@@ -12,7 +13,6 @@ export default styled.div`
 
   .ticker {
     position: relative;
-    /* border: 1px solid white; */
     overflow: hidden;
   }
 
@@ -28,19 +28,9 @@ export default styled.div`
     display: inline-block;
     width: ${({itemWidth}) => itemWidth+"px"};
     text-align: center;
+    margin-right: ${({itemMargin}) => itemMargin+"px"};
 
-    /* &:nth-child(odd) {
-      border-bottom: 1px solid ${({theme}) => theme.mainColor};
-      border-top: 1px solid ${({theme}) => theme.mainColor};
-    }
-    &:nth-child(even) {
-      color: ${({theme}) => theme.mainColor};
-    } */
   }
-
-  /* .reverse {
-    height: 100px;
-  } */
 
   .reverse .track {
     position: absolute;
