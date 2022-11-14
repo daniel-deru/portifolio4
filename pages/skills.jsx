@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react"
-import { motion, useTransform, useMotionValue } from "framer-motion"
+import { motion, useTransform, useMotionValue, useAnimation } from "framer-motion"
 
 // https://dev.to/holdmypotion/react-marquee-in-framer-motion-3d5a
 
@@ -14,19 +14,41 @@ const SKILLS = ["OOP", "MVC", "Linux", "UI/UX", "API's", "Testing", "Desktop", "
 
 const Skills = () => {
 
+  const animation = useAnimation()
+
+  const sequence = async () => {
+    await animation.start({
+      height: "100%",
+      transition: {
+        duration: 1
+      }
+    })
+    await animation.start({
+      width: "80%",
+      transition: {
+        duration: 1
+      }
+    })
+  }
+
   const contentVariant = {
     initial: {
-      width: 20
-    },
-    visible: {
-      width: "100%"
+      width: 5,
+      height: 5
     }
   }
 
   const tickerVariant = {
+    initial: {
+      opacity: 0
+    },
     animate: (width) => ({
       x: [0, width],
+      opacity: 1,
       transition: {
+        opacity: {
+          delay: 1
+        },
         x: {
           repeat: Infinity,
           repeateType: "loop",
@@ -44,7 +66,7 @@ const Skills = () => {
   }
 
   useEffect(() => {
-
+    sequence()
   }, [])
 
   return (
@@ -53,14 +75,16 @@ const Skills = () => {
       itemWidth={itemWidth} 
       itemMargin={itemMargin} 
       variants={contentVariant} 
-      initial="initial" 
-      animate="visible"
+      initial="initial"
+      // onClick={sequence}
+      animate={animation}
     >
         
         <div className="ticker">
           <motion.div
             className="track"
             variants={tickerVariant}
+            initial="initial"
             animate="animate"
             custom={-LANGUAGES.length * (itemWidth + itemMargin)}
           >
@@ -80,6 +104,7 @@ const Skills = () => {
           <motion.div
             className="track"
             variants={tickerVariant}
+            initial="initial"
             animate="animate"
             custom={LIBRARIES.length * (itemWidth + itemMargin)}
           >
@@ -99,6 +124,7 @@ const Skills = () => {
           <motion.div
             className="track"
             variants={tickerVariant}
+            initial="initial"
             animate="animate"
             custom={-SKILLS.length * (itemWidth + itemMargin)}
           >
